@@ -1,4 +1,4 @@
-package com.skilldistillery.jpavideostore.entities;
+package com.skilldistillery.jpacrud.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
