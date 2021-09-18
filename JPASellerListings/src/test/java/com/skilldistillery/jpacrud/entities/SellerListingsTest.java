@@ -46,6 +46,13 @@ class SellerListingsTest {
 	void test_SellerListings_entity_mapping() {
 		assertNotNull(listings);
 		assertEquals("Keldeo GX", listings.getName());
+		assertEquals("Basic Pokemon", listings.getType());
+		assertEquals("Near Mint", listings.getCondition());
+		assertEquals("Sleeved immediately upon opening.  I am not a grader; however, this card looks immaculate!", listings.getConditionDescription());
+		assertEquals("47/236", listings.getCardNumber());
+		assertEquals("Sun & Moon: Unified Minds", listings.getSeries());
+//		assertEquals("Keldeo GX", listings.getName());
+//		assertEquals("Keldeo GX", listings.getName());
 	}
 
 }

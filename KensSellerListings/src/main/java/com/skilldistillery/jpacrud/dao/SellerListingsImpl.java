@@ -19,8 +19,7 @@ public class SellerListingsImpl implements SellerListingsDAO {
 
 	@Override
 	public SellerListings findById(int SellerListingId) {
-		// TODO Auto-generated method stub
-		return null;
+		return em.find(SellerListings.class, SellerListingId);
 	}
 
 	@Override
@@ -28,5 +27,6 @@ public class SellerListingsImpl implements SellerListingsDAO {
 		String jpql = "SELECt s FROM SellerListings s";
 		return em.createQuery(jpql, SellerListings.class).getResultList();
 	}
+	
 
 }
