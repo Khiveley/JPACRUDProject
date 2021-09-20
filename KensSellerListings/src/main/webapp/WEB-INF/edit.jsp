@@ -28,7 +28,8 @@
 		Image (Please provide a URL link): <input type="text" name="imageUrl" value =${listing.imageUrl }><br><br>
 		
 		<input class="btn btn-primary" type="submit" value="Edit Listing"/>
-		</form>
+		</form><br><br>
+		
 
 <form class="form" action="edit.do"
 			method="GET">

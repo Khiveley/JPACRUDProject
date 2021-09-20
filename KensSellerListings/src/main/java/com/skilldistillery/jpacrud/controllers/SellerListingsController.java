@@ -46,8 +46,6 @@ public class SellerListingsController {
 		model.addAttribute("listing", dbListing);
 		return "show";
 		
-		
-		
 	}
 
 	@RequestMapping(path = "show.do", method = RequestMethod.POST)
