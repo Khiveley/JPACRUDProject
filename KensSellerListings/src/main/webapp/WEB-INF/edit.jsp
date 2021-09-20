@@ -16,23 +16,23 @@
 
 <h5>Which fields from your listing would you like to update?</h5>
 
-<form action="edit.do" method="POST">
+<form action="updatelisting.do?id=${listing.id }" method="POST">
 		<h5>To create a listing, provide the following:</h5>
 		
 		<br>
-		Name: <input type="text" name="name"><br><br>
-		Type: <input type="text" name="type"><br><br>
-		Condition: <input type="text" name="condtion"><br><br>
-		Condition Description: <input type="text" name="condtionDescription"><br><br>
-		Card Number: <input type="text" name="cardNumber"><br><br>
-		Series: <input type="text" name="series"><br><br>
-		Rarity: <input type="text" name="rarity"><br><br>
-		Image (Please provide a URL link): <input type="text" name="imageUrl"><br><br>
+		Name: <input type="text" name="name" value =${listing.name }><br><br>
+		Type: <input type="text" name="type" value =${listing.type }><br><br>
+		Condition: <input type="text" name="condition" value =${listing.condition }><br><br>
+		Condition Description: <input type="text" name="conditionDescription" value =${listing.conditionDescription }><br><br>
+		Card Number: <input type="text" name="cardNumber" value =${listing.cardNumber }><br><br>
+		Series: <input type="text" name="series" value =${listing.series }><br><br>
+		Rarity: <input type="text" name="rarity" value =${listing.rarity }><br><br>
+		Image (Please provide a URL link): <input type="text" name="imageUrl" value =${listing.imageUrl }><br><br>
 		
 		<input class="btn btn-primary" type="submit" value="Edit Listing"/>
 		</form>
 
-<form class="form" action="edit.do?id=${sellerlisting.id}"
+<form class="form" action="edit.do"
 			method="GET">
 			Update Listing: <input type="text" name="id" /> <input
 				class="btn btn-primary" type="submit" value="Update Listing" />

@@ -32,9 +32,20 @@ public class SellerListingsController {
 	}
 
 	@RequestMapping(path = "edit.do", method = RequestMethod.GET)
-	public String editSellerListing(Model model) {
-		String viewName = "create";
+	public String editSellerListing(Model model, int id) {
+		String viewName = "edit";
+		SellerListings listing = dao.findById(id);
+		model.addAttribute("listing", listing);
 		return viewName;
+	}
+	
+	@RequestMapping(path = "updatelisting.do", method= RequestMethod.POST)
+	public String updateSellerListing(SellerListings listing, Model model, int id) {
+		String viewName ="show";
+		SellerListings dbListing = dao.updateListing(id, listing);
+		model.addAttribute("listing", dbListing);
+		return "show";
+		
 	}
 
 	@RequestMapping(path = "show.do", method = RequestMethod.POST)
