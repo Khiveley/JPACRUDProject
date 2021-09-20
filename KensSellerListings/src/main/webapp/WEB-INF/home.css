@@ -2,3 +2,8 @@ body {
 	background-color: lightgrey;
 	color: navy;
 }
+.card-image{
+	height: 200px;
+	width: 165px;
+	
+}

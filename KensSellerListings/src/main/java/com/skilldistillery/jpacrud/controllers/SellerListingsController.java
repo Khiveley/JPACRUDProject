@@ -13,22 +13,42 @@ import com.skilldistillery.jpacrud.entities.SellerListings;
 @Controller
 public class SellerListingsController {
 
-	
 	@Autowired
 	private SellerListingsDAO dao;
-	
-	@RequestMapping(path = {"/", "home.do"})
+
+	@RequestMapping(path = { "/", "home.do" })
 	public String home(Model model) {
-	model.addAttribute("listings", dao.findAll());
-	return "home";
+		model.addAttribute("listings", dao.findAll());
+		return "home";
 	}
-	
-	@RequestMapping(path = "getSellerListing.do", method=RequestMethod.GET, params="id")
+
+	@RequestMapping(path = "getSellerListing.do", method = RequestMethod.GET, params = "id")
 	public String show(Model model, @RequestParam Integer id) {
-	System.out.println(id);	
-	SellerListings listing = dao.findById(id);	
-	System.out.println(listing);
-	model.addAttribute("listing", listing);
-	return "show";
+		System.out.println(id);
+		SellerListings listing = dao.findById(id);
+		System.out.println(listing);
+		model.addAttribute("listing", listing);
+		return "show";
 	}
+
+	@RequestMapping(path = "edit.do", method = RequestMethod.GET)
+	public String editSellerListing(Model model) {
+		String viewName = "create";
+		return viewName;
+	}
+
+	@RequestMapping(path = "show.do", method = RequestMethod.POST)
+	public String createListing(SellerListings listing, Model model) {
+		System.out.println(listing);
+		SellerListings create = dao.createListing(listing);
+		model.addAttribute("listing", create);
+		return "show";
+
+	}
+
+	@RequestMapping(path = "create.do")
+	public String listingForm() {
+		return "create";
+	}
+
 }

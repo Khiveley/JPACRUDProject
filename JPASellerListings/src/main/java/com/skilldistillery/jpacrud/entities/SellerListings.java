@@ -24,10 +24,12 @@ public class SellerListings {
 	@Column(name="card_number")
 	private String cardNumber;
 	private String series;
+	@Column(name="image_url")
+	private String imageUrl;
 //	private int grade;
 //	@Column(name="professional_grading_company")
 //	private String professionalGradingCompany;
-//	private String rarity;
+	private String rarity;
 //	private String manufacturer;
 //	@Column(name="year_manufactured")
 //	private String yearManufactured;
@@ -37,8 +39,7 @@ public class SellerListings {
 //	private Double mavinEstimatedValue;
 //	@Column(name="game_series")
 //	private String gameSeries;
-//	@Column(name="image_url")
-//	private String imageUrl;
+	
 //	@Column(name="create_date")
 //	private LocalDateTime createDate;
 //	@Column(name="last_modified_date")
@@ -57,7 +58,7 @@ public class SellerListings {
 	
 	
 	public SellerListings(int id, String name, String type, String condition, String conditionDescription,
-			String cardNumber, String series) {
+			String cardNumber, String series, String imageUrl, String rarity) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -66,6 +67,8 @@ public class SellerListings {
 		this.conditionDescription = conditionDescription;
 		this.cardNumber = cardNumber;
 		this.series = series;
+		this.imageUrl = imageUrl;
+		this.rarity = rarity;
 	}
 
 
@@ -99,12 +102,16 @@ public class SellerListings {
 	public void setCardNumber(String cardNumber) {
 		this.cardNumber = cardNumber;
 	}
+	
 	public String getSeries() {
 		return series;
 	}
 	public void setSeries(String series) {
 		this.series = series;
 	}
+	public String getImageUrl() {
+	return imageUrl;
+}
 //	public int getGrade() {
 //		return grade;
 //	}
@@ -117,12 +124,16 @@ public class SellerListings {
 //	public void setProfessionalGradingCompany(String professionalGradingCompany) {
 //		this.professionalGradingCompany = professionalGradingCompany;
 //	}
-//	public String getRarity() {
-//		return rarity;
-//	}
-//	public void setRarity(String rarity) {
-//		this.rarity = rarity;
-//	}
+	public String getRarity() {
+		return rarity;
+}
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
+	public void setRarity(String rarity) {
+		this.rarity = rarity;
+	}
 //	public String getManufacturer() {
 //		return manufacturer;
 //	}
@@ -152,9 +163,6 @@ public class SellerListings {
 //	}
 //	public void setGameSeries(String gameSeries) {
 //		this.gameSeries = gameSeries;
-//	}
-//	public String getImageUrl() {
-//		return imageUrl;
 //	}
 //	public void setImageUrl(String imageUrl) {
 //		this.imageUrl = imageUrl;
@@ -212,8 +220,12 @@ public class SellerListings {
 	public String toString() {
 		return "SellerListings [id=" + id + ", name=" + name + ", type=" + type + ", condition=" + condition
 				+ ", conditionDescription=" + conditionDescription + ", cardNumber=" + cardNumber + ", series=" + series
-				+ "]";
+				+ ", imageUrl=" + imageUrl + ", rarity=" + rarity + "]";
 	}
+
+
+
+
 	
 	
 }

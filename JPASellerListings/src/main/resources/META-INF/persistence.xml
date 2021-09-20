@@ -4,8 +4,8 @@
 	
 	<provider>org.hibernate.jpa.HibernatePersistenceProvider
     </provider>
-    
-    <class>com.skilldistillery.jpavideostore.entities.SellerListings</class>
+  
+    <class>com.skilldistillery.jpacrud.entities.SellerListings</class>
    
     <properties>
 	<property name="javax.persistence.jdbc.url" 
