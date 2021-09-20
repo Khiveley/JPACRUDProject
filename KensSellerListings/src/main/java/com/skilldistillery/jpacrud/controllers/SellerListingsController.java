@@ -46,6 +46,8 @@ public class SellerListingsController {
 		model.addAttribute("listing", dbListing);
 		return "show";
 		
+		
+		
 	}
 
 	@RequestMapping(path = "show.do", method = RequestMethod.POST)
@@ -60,6 +62,12 @@ public class SellerListingsController {
 	@RequestMapping(path = "create.do")
 	public String listingForm() {
 		return "create";
+	}
+	
+	@RequestMapping(path = "delete.do")
+	public String deleteRecord(int id) {
+	dao.deleteListing(id);
+	return "home";
 	}
 
 }

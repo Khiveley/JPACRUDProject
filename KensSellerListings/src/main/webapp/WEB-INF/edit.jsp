@@ -14,8 +14,6 @@
 </head>
 <body>
 
-<h5>Which fields from your listing would you like to update?</h5>
-
 <form action="updatelisting.do?id=${listing.id }" method="POST">
 		<h5>To create a listing, provide the following:</h5>
 		

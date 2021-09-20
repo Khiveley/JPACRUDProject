@@ -76,17 +76,5 @@ public class SellerListingsImpl implements SellerListingsDAO {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-
-//	@Override
-//	public String findByName(String name) {
-//		
-//		String query = "SELECT sellerlistings.id FROM SELLERLISTINGS WHERE sellerlisitngs.name = :name";
-//		String name = (String) em.createQuery(query).setParameter("name", name).getSingleResult();
-//		
-//		return name;
-//		
-//	}
-	
 
 }

@@ -18,6 +18,7 @@ public class SellerListings {
 	private int id;
 	private String name;
 	private String type;
+	@Column(name="card_condition")
 	private String condition;
 	@Column(name="condition_description")
 	private String conditionDescription;
